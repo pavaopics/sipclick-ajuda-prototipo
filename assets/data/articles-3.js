@@ -300,7 +300,7 @@ const ARTICLES_3 = [
             "Todos os lançamentos foram substituídos ou anulados.",
             "A meta está fora da janela do ciclo.",
           ]),
-          callout("info", "Ausente é diferente de zero", "Se a média aparece vazia, não significa desempenho zero. Significa que não há dado elegível. O sistema evita transformar falta de dado em nota ruim."),
+          callout("info", "Ausente é diferente de zero", "Se a média aparece como \"Sem nota\", não significa desempenho zero. Significa que não há dado elegível. O sistema evita transformar falta de dado em nota ruim."),
         ],
       },
       {

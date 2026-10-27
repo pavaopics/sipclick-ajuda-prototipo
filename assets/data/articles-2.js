@@ -319,6 +319,7 @@ const ARTICLES_2 = [
             "Pares e liderados têm mínimo de respostas (padrão 3). Abaixo disso, a média da fonte é anulada.",
             "Competência sem nota não entra na conta. Zero é uma nota válida e diferente de ausência.",
             "Se nenhuma nota existe, a média é nula. O sistema não inventa zero.",
+            "Em comparações por pilar ou competência, a ausência aparece como \"—\" e não derruba a média.",
           ]),
           formula("Exemplo com duas fontes", "Líder 8,0 e auto 6,0", "Pesos 100/0 → 8,0. Pesos 50/50 → 7,0. Em 'por item', a conta é feita item a item antes da média final."),
           callout("warn", "Por que a nota mudou sem você mexer?", "Pode ter entrado uma avaliação mais recente, uma meta pode ter recebido lançamento, o ciclo pode usar outra metodologia congelada ou o comitê pode ter mudado o nível do eixo no Nine Box. O comitê não altera a nota de competências."),
