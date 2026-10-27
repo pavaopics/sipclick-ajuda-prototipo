@@ -330,7 +330,7 @@ const ARTICLES_3 = [
     atualizado: "2026-10-27",
     tags: ["pdi", "gerar", "plano de desenvolvimento", "ia", "competências", "nine box", "pré-requisitos"],
     aliases: ["criar pdi", "gerar plano", "pdi bloqueado", "plano de desenvolvimento"],
-    prerequisitos: ["Vínculo com o organograma.", "Ciclo ativo.", "Avaliação canônica no ciclo com pelo menos uma nota.", "A IA é opcional: sem ela, o plano é montado a partir da avaliação (modo assistido)."],
+    prerequisitos: ["Vínculo com o organograma.", "Ciclo ativo.", "Avaliação canônica no ciclo com pelo menos uma nota.", "A IA generativa é opcional: sem ela, o plano é montado pela inteligência determinística do Sipclick."],
     secoes: [
       {
         titulo: "O que o PDI usa",
@@ -345,7 +345,7 @@ const ARTICLES_3 = [
           steps([
             { titulo: "Abra o PDI", texto: "Em Desempenho > PDI. Colaborador vê o próprio; gestor vê o próprio e a linha; RH/admin escolhem a pessoa." },
             { titulo: "Confira a base do plano", texto: "A tela mostra ciclo, avaliação-base, notas, Nine Box (automático ou calibrado) e avisos de avaliação incompleta." },
-            { titulo: "Gere o plano", texto: "Com IA configurada, ela escreve o plano. Sem IA, o sistema usa o fallback determinístico com a base da avaliação e do Nine Box." },
+            { titulo: "Gere o plano", texto: "Com a IA generativa configurada, ela escreve o plano. Sem ela, o servidor usa a inteligência determinística com a base da avaliação e do Nine Box." },
             { titulo: "Revise o objetivo e as ações", texto: "O plano tem 1 a 8 ações, checkpoints de 30/60/90 dias e perguntas de conversa. A primeira ação não pode ser de estudo." },
             { titulo: "Compartilhe e colha o aceite", texto: "O colaborador aceita o plano e o gestor valida. O aceite fica como selo até cada lado agir." },
           ]),
@@ -363,7 +363,7 @@ const ARTICLES_3 = [
               ["Sem notas", "A avaliação existe, mas nenhuma nota elegível."],
             ]
           ),
-          callout("info", "IA é opcional", "Com IA configurada, ela escreve o plano. Sem IA, o sistema monta o PDI a partir da avaliação, das competências, das metas e do Nine Box. O botão não é mais bloqueado por falta de IA."),
+          callout("info", "IA generativa é opcional", "Com a IA generativa configurada, ela escreve o plano. Sem ela, o servidor monta o PDI com a inteligência determinística, usando avaliação, competências, metas e Nine Box. O botão não é mais bloqueado."),
         ],
       },
     ],
@@ -496,7 +496,7 @@ const ARTICLES_3 = [
         titulo: "O que a tela e o servidor exigem",
         blocos: [
           p("O servidor e a tela agora seguem a mesma regra: ciclo ativo, vínculo com o organograma e uma avaliação canônica com pelo menos uma nota. A IA não é pré-requisito; ela só melhora o texto final."),
-          callout("info", "PDI manual faz parte do produto", "Sem IA configurada, o sistema monta um plano completo a partir da avaliação. O resultado é um PDI assistido, não um texto em branco."),
+          callout("info", "PDI manual faz parte do produto", "Sem a IA generativa, o sistema monta um plano completo com a inteligência determinística, a partir da avaliação. O resultado é um PDI assistido, não um texto em branco."),
         ],
       },
       {
