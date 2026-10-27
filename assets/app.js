@@ -737,7 +737,7 @@
   }
 
   function setTitle(title) {
-    document.title = `${title} — Central de Ajuda Sipclick`;
+    document.title = title === "Central de Ajuda" ? "Central de Ajuda — Sipclick RH" : `${title} — Central de Ajuda Sipclick`;
   }
 
   function render() {
