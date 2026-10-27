@@ -164,6 +164,7 @@ const ARTICLES_4 = [
           table(
             ["Indicador", "Por que pode ficar vazio"],
             [
+              ["Cobertura de resultados", "Usa todas as pessoas ativas do recorte como base; quem ainda não começou aparece como pendente, não como nota zero."],
               ["Cobertura de PDI", "O público-alvo de PDI ainda não é cadastro no dado real; sem denominador, não há percentual."],
               ["Dispersão execução × mudança", "No dado real, nota antes e depois são nulas; sem pares, sem pontos."],
               ["Base de metas", "A base de metas do ciclo pode estar vazia."],

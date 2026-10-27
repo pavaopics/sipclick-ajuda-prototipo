@@ -203,7 +203,7 @@ const ARTICLES_3 = [
               ["—", "Encerrada", "Ciclo fechado ou status que não conta."],
             ]
           ),
-          callout("warn", "As cores não são as mesmas do atingimento", "A saúde por ritmo usa 1,10 / 0,95 / 0,80. A cor por atingimento usa 1,00 / 0,90 / 0,80. É por isso que uma meta pode parecer verde em um lugar e âmbar em outro."),
+          callout("info", "Uma régua de cor só", "As cores de meta agora seguem a mesma régua da situação: 1,10 / 0,95 / 0,80. O rótulo (Adiantada, No caminho, Atenção, Em risco) e a cor contam a mesma história em qualquer tela."),
         ],
       },
     ],
@@ -330,7 +330,7 @@ const ARTICLES_3 = [
     atualizado: "2026-10-27",
     tags: ["pdi", "gerar", "plano de desenvolvimento", "ia", "competências", "nine box", "pré-requisitos"],
     aliases: ["criar pdi", "gerar plano", "pdi bloqueado", "plano de desenvolvimento"],
-    prerequisitos: ["Vínculo com o organograma.", "Ciclo ativo.", "Avaliação canônica no ciclo com pelo menos uma nota.", "IA de PDI configurada (exigência atual da tela)."],
+    prerequisitos: ["Vínculo com o organograma.", "Ciclo ativo.", "Avaliação canônica no ciclo com pelo menos uma nota.", "A IA é opcional: sem ela, o plano é montado a partir da avaliação (modo assistido)."],
     secoes: [
       {
         titulo: "O que o PDI usa",
@@ -345,7 +345,7 @@ const ARTICLES_3 = [
           steps([
             { titulo: "Abra o PDI", texto: "Em Desempenho > PDI. Colaborador vê o próprio; gestor vê o próprio e a linha; RH/admin escolhem a pessoa." },
             { titulo: "Confira a base do plano", texto: "A tela mostra ciclo, avaliação-base, notas, Nine Box (automático ou calibrado) e avisos de avaliação incompleta." },
-            { titulo: "Gere o plano", texto: "O sistema monta as ações com apoio de IA ou com um fallback determinístico, quando disponível." },
+            { titulo: "Gere o plano", texto: "Com IA configurada, ela escreve o plano. Sem IA, o sistema usa o fallback determinístico com a base da avaliação e do Nine Box." },
             { titulo: "Revise o objetivo e as ações", texto: "O plano tem 1 a 8 ações, checkpoints de 30/60/90 dias e perguntas de conversa. A primeira ação não pode ser de estudo." },
             { titulo: "Compartilhe e colha o aceite", texto: "O colaborador aceita o plano e o gestor valida. O aceite fica como selo até cada lado agir." },
           ]),
@@ -361,10 +361,9 @@ const ARTICLES_3 = [
               ["Sem ciclo ativo", "Não há período para ancorar a avaliação."],
               ["Sem avaliação", "Não existe avaliação canônica no ciclo."],
               ["Sem notas", "A avaliação existe, mas nenhuma nota elegível."],
-              ["Sem IA configurada", "A tela atual exige IA de PDI configurada. Este é um limite do produto, não do seu dado."],
             ]
           ),
-          callout("warn", "Site e produto podem divergir", "O site público fala em PDI manual, mas a tela atual bloqueia sem IA configurada. A Ajuda descreve o que a tela faz hoje. Se a configuração de IA não estiver disponível para você, fale com o admin."),
+          callout("info", "IA é opcional", "Com IA configurada, ela escreve o plano. Sem IA, o sistema monta o PDI a partir da avaliação, das competências, das metas e do Nine Box. O botão não é mais bloqueado por falta de IA."),
         ],
       },
     ],
@@ -468,14 +467,14 @@ const ARTICLES_3 = [
   {
     id: "pdi-nao-gera",
     titulo: "Por que o PDI não gera",
-    resumo: "Os cinco bloqueios mais comuns, do vínculo à IA, e como confirmar cada um.",
+    resumo: "Os bloqueios mais comuns, do vínculo à avaliação, e como confirmar cada um.",
     modulo: "pdi",
     etapa: "resolver",
     formato: "problema",
     papeis: ["todos"],
     tempo: 3,
     atualizado: "2026-10-27",
-    tags: ["pdi", "não gera", "bloqueado", "sem avaliação", "sem ia", "sem ciclo", "erro"],
+    tags: ["pdi", "não gera", "bloqueado", "sem avaliação", "sem ciclo", "erro", "modo assistido"],
     aliases: ["pdi não abre", "botão bloqueado", "não consigo gerar pdi", "erro no pdi"],
     prerequisitos: [],
     secoes: [
@@ -489,16 +488,15 @@ const ARTICLES_3 = [
               ["Ciclo ativo", "Nenhum ciclo em andamento.", "Admin/RH precisa criar ou ativar um ciclo."],
               ["Avaliação no ciclo", "Não há avaliação canônica.", "Conclua e envie a avaliação do líder ou a autoavaliação."],
               ["Notas na avaliação", "A avaliação existe, mas está sem nota.", "Feche as competências e as metas."],
-              ["IA configurada", "A tela exige IA de PDI.", "Fale com o super admin. Hoje a tela não oferece geração manual."],
             ]
           ),
         ],
       },
       {
-        titulo: "Cuidado com a diferença entre telas e servidor",
+        titulo: "O que a tela e o servidor exigem",
         blocos: [
-          p("O servidor aceita gerar com uma avaliação canônica e pelo menos uma nota. A tela é mais restritiva: também exige ciclo ativo, vínculo e IA configurada. Se o servidor permitiria, mas a tela bloqueia, o problema é de configuração, não de dado."),
-          callout("warn", "Não existe PDI manual na tela atual", "O site público menciona PDI manual, mas o produto bloqueia a geração sem IA configurada. A Ajuda não promete o que a tela não entrega."),
+          p("O servidor e a tela agora seguem a mesma regra: ciclo ativo, vínculo com o organograma e uma avaliação canônica com pelo menos uma nota. A IA não é pré-requisito; ela só melhora o texto final."),
+          callout("info", "PDI manual faz parte do produto", "Sem IA configurada, o sistema monta um plano completo a partir da avaliação. O resultado é um PDI assistido, não um texto em branco."),
         ],
       },
       {
