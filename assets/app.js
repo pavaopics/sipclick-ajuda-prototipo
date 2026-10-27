@@ -117,7 +117,8 @@
       const article = entry.article;
       if (filters.modulo && article.modulo !== filters.modulo) continue;
       if (filters.etapa && article.etapa !== filters.etapa) continue;
-      if (filters.formato && article.formato !== filters.formato) continue;
+      if (filters.formato === 'video' && !article.videoId) continue;
+      if (filters.formato && filters.formato !== 'video' && article.formato !== filters.formato) continue;
       if (filters.papel && filters.papel !== "todos" && !article.papeis.includes("todos") && !article.papeis.includes(filters.papel)) continue;
 
       let score = 0;
@@ -508,7 +509,7 @@
       .filter((a) => a.modulo === categoryId)
       .filter((a) => !filters.etapa || a.etapa === filters.etapa)
       .filter((a) => !filters.papel || filters.papel === "todos" || a.papeis.includes("todos") || a.papeis.includes(filters.papel))
-      .filter((a) => !filters.formato || a.formato === filters.formato);
+      .filter((a) => !filters.formato || (filters.formato === 'video' ? !!a.videoId : a.formato === filters.formato));
 
     return `
       <div class="hc-breadcrumb"><a href="#/ajuda">Ajuda</a>${icon("chevronRight", "icon--sm")}<span>${esc(category.nome)}</span></div>
