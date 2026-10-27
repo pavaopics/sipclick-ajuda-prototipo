@@ -59,11 +59,31 @@ const PLAYLISTS = [
   { id: "ciclo-avaliacao", nome: "Ciclo e avaliação", descricao: "Do ciclo ao envio da avaliação.", status: "em produção" },
   { id: "metas", nome: "Metas", descricao: "Criar, distribuir e acompanhar metas.", status: "em produção" },
   { id: "pdi", nome: "PDI e desenvolvimento", descricao: "Plano, jornada e evidências.", status: "em produção" },
-  { id: "nine-box", nome: "Nine Box e talento", descricao: "Matriz, potencial e calibração.", status: "em produção" },
+  { id: "nine-box", nome: "Nine Box e talento", descricao: "Matriz, potencial e calibração.", status: "1 vídeo" },
   { id: "analytics", nome: "People Analytics", descricao: "Como ler os indicadores.", status: "em produção" },
 ];
 
 const VIDEOS = [
+  {
+    id: "nine-box",
+    titulo: "Nine Box no Sipclick RH: como funciona e como calibrar",
+    resumo: "Entenda de onde vêm as notas, como cada pessoa cai em uma das 9 caixas e como o comitê calibra a classificação.",
+    playlist: "nine-box",
+    artigo: "nine-box-como-calculado",
+    duracao: "1:41",
+    poster: "assets/media/poster-nine-box.jpg",
+    posterHome: "assets/media/poster-home-nine-box.jpg",
+    src: "assets/media/nine-box.mp4",
+    youtubeId: null,
+    capitulos: [
+      { segundos: 0, tempo: "0:00", titulo: "Introdução" },
+      { segundos: 4, tempo: "0:04", titulo: "O que é o Nine Box" },
+      { segundos: 18, tempo: "0:18", titulo: "De onde vêm as notas" },
+      { segundos: 41, tempo: "0:41", titulo: "A matriz no sistema" },
+      { segundos: 57, tempo: "0:57", titulo: "Calibração na Gestão Rápida" },
+      { segundos: 78, tempo: "1:18", titulo: "Resultado e histórico" },
+    ],
+  },
   {
     id: "cadastrar-equipe",
     titulo: "Como cadastrar sua equipe no Sipclick RH",

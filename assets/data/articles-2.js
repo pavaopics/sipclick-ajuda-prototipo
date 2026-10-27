@@ -385,6 +385,7 @@ const ARTICLES_2 = [
     tags: ["nine box", "cálculo", "desempenho", "potencial", "cortes", "quadrante", "matriz", "0 a 100"],
     aliases: ["como calcula nine box", "eixo x e y", "matriz 3x3", "por que estou nesse quadrante"],
     prerequisitos: ["Ciclo com avaliações e potencial medido ou regra de aproximação."],
+    videoId: "nine-box",
     secoes: [
       {
         titulo: "Os dois eixos",

@@ -592,7 +592,7 @@
   }
 
   function renderVideos(selectedPlaylistId, selectedVideoId) {
-    const firstWithVideo = playlists.find((p) => videos.some((v) => v.playlist === p.id))?.id || playlists[0].id;
+    const firstWithVideo = videos[0]?.playlist || playlists.find((p) => videos.some((v) => v.playlist === p.id))?.id || playlists[0].id;
     const playlistId = playlistById.has(selectedPlaylistId) ? selectedPlaylistId : firstWithVideo;
     const playlist = playlistById.get(playlistId);
     const list = videos.filter((v) => v.playlist === playlistId);
